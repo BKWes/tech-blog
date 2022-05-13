@@ -59,7 +59,10 @@ router.post('/', (req,res) => {
 
 // PUT new username
 router.put('/:id', (req,res) => {
-    User.update(req.body.username, {
+    User.update({
+        username: req.body.username
+    },
+    {
         individualHooks: true,
         where: {
             id: req.params.id
