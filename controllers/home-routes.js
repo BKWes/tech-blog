@@ -91,7 +91,7 @@ router.get("/post/:id", (req, res) => {
 
 router.get("/login", (req, res) => {
 	if (req.session.loggedIn) {
-		res.redirect("/");
+		res.redirect("/dashboard");
 		return;
 	}
 
@@ -100,7 +100,7 @@ router.get("/login", (req, res) => {
 
 router.get("/signup", (req, res) => {
 	if (req.session.loggedIn) {
-		res.redirect("/");
+		res.redirect("/dashboard");
 		return;
 	}
 
@@ -113,7 +113,7 @@ router.get("/new_post", (req, res) => {
 		return;
 	}
 
-	res.render("newpost");
+	res.render("new-post");
 });
 
 module.exports = router;
