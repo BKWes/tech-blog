@@ -1,0 +1,15 @@
+{{#if posts.length}}
+<section>
+  <h2 class="d-flex justify-content-center">Your Posts</h2>
+  <dl class="d-flex justify-content-center flex-wrap">
+    {{#each posts as |post|}}
+    <dd class="col-10">
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </dd>
+    {{/each}}
+  </dl>
+</section>
+{{/if}}
+
+<a class="d-flex justify-content-center" href="/new_post"><button >New Post</button></a>
