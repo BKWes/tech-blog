@@ -15,13 +15,9 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // change to content??
-        post_url: {
+        content: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isUrl: true
-            }
         },
         user_id: {
             type: DataTypes.INTEGER,
